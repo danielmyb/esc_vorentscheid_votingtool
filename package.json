@@ -1,0 +1,18 @@
+{
+  "name": "esc_vorentscheid_votingtool",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "dmyb",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "selenium-webdriver": "^4.8.1"
+  },
+  "devDependencies": {
+    "chromedriver": "^110.0.0"
+  }
+}
