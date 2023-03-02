@@ -59,3 +59,15 @@ We parse the path of the SVG and use the following formula:
 ![distance](./img/distance.png)
 
 Also I created a list with paths I parsed manually (characters.json) this contains at least 2 entries for each character and is used to check the character distance.
+
+# How to use
+
+You need to install node on your computer and have a current version of chrome on it.
+After that you need to install the packages.
+
+npm i
+
+Then you can run the tool. You can configure the amount of parallel runs and the amount of runs (so you vote #parallel x #runs times).
+Beware! Do not run too much in parallel.
+
+node index.js [amount of parallel runs] [amount of runs]
