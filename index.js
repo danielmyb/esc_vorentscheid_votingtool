@@ -194,5 +194,19 @@ function assumeCharacter(charMap, character) {
     return _.sample(candidatesLength);
 }
 
-// Duplicate this line for multiple runs in parallel
-startScript();
+async function run(parallelRuns, iterations) {
+    for (let i = 0; i < iterations; i++) {
+        const promises = []
+        for (let j = 0; j < parallelRuns; j++) {
+            promises.push(startScript());
+        }
+        await Promise.all(promises);
+    }
+
+}
+
+const args = process.argv.slice(2);
+const parallelRuns = Number(args[0])
+const iterations = Number(args[1])
+
+run(parallelRuns, iterations)
